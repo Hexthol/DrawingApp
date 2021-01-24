@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ZichenWang_Lab3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nM-0m-pFn">
+                                <rect key="frame" x="-4" y="44" width="383" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sk-zc-ZO7">
+                                        <rect key="frame" x="235" y="20" width="128" height="30"/>
+                                        <state key="normal" title="Undo"/>
+                                        <connections>
+                                            <action selector="undo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRJ-Au-4Mq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rws-My-0F6">
+                                        <rect key="frame" x="283.66666666666669" y="58" width="49" height="30"/>
+                                        <state key="normal" title="Save    "/>
+                                        <connections>
+                                            <action selector="saveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vlX-Ww-N1e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7v-DG-1WF">
+                                        <rect key="frame" x="169.66666666666666" y="20" width="44" height="30"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearCanvas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U2n-rG-QgH"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="OSg-m0-HHT">
+                                        <rect key="frame" x="18" y="58" width="132.66666666666666" height="31"/>
+                                        <connections>
+                                            <action selector="changeThickness:" destination="BYZ-38-t0r" eventType="valueChanged" id="kLR-2q-g0M"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0a-dj-Gyc">
+                                        <rect key="frame" x="169.66666666666666" y="58" width="44" height="30"/>
+                                        <state key="normal" title="           "/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwW-hg-SwO">
+                                        <rect key="frame" x="20" y="20" width="128.66666666666666" height="30"/>
+                                        <state key="normal" title="Redo"/>
+                                        <connections>
+                                            <action selector="redo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ekD-x2-2ur"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="OSg-m0-HHT" firstAttribute="trailing" secondItem="vwW-hg-SwO" secondAttribute="trailing" id="7c0-hD-ptU"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Sk-zc-ZO7" secondAttribute="trailing" constant="20" id="IPu-PC-juw"/>
+                                    <constraint firstItem="9Sk-zc-ZO7" firstAttribute="leading" secondItem="G7v-DG-1WF" secondAttribute="trailing" constant="21.333333333333343" id="NnH-bh-vox"/>
+                                    <constraint firstItem="Y0a-dj-Gyc" firstAttribute="trailing" secondItem="G7v-DG-1WF" secondAttribute="trailing" id="PBp-MB-FS2"/>
+                                    <constraint firstItem="Y0a-dj-Gyc" firstAttribute="top" secondItem="G7v-DG-1WF" secondAttribute="bottom" constant="8" id="V30-n4-4eG"/>
+                                    <constraint firstAttribute="trailing" secondItem="rws-My-0F6" secondAttribute="trailing" constant="50.333333333333314" id="Yhv-5G-4Hv"/>
+                                    <constraint firstItem="Y0a-dj-Gyc" firstAttribute="leading" secondItem="OSg-m0-HHT" secondAttribute="trailing" constant="21" id="cvX-iK-3KK"/>
+                                    <constraint firstItem="Y0a-dj-Gyc" firstAttribute="centerX" secondItem="6nM-0m-pFn" secondAttribute="centerX" id="gT4-Yy-9nO"/>
+                                    <constraint firstItem="9Sk-zc-ZO7" firstAttribute="baseline" secondItem="G7v-DG-1WF" secondAttribute="baseline" id="gg5-Lz-Imz"/>
+                                    <constraint firstItem="rws-My-0F6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Y0a-dj-Gyc" secondAttribute="trailing" constant="8" symbolic="YES" id="hUP-q9-Ki7"/>
+                                    <constraint firstItem="OSg-m0-HHT" firstAttribute="top" secondItem="vwW-hg-SwO" secondAttribute="bottom" constant="8" id="lfj-Ma-S05"/>
+                                    <constraint firstItem="OSg-m0-HHT" firstAttribute="leading" secondItem="6nM-0m-pFn" secondAttribute="leading" constant="20" id="m8H-8c-k1D"/>
+                                    <constraint firstItem="Y0a-dj-Gyc" firstAttribute="leading" secondItem="G7v-DG-1WF" secondAttribute="leading" id="o0V-i8-N4M"/>
+                                    <constraint firstItem="OSg-m0-HHT" firstAttribute="leading" secondItem="vwW-hg-SwO" secondAttribute="leading" id="p3D-rc-yQ5"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y0a-dj-Gyc" secondAttribute="bottom" id="sVX-Fs-RVc"/>
+                                    <constraint firstItem="Y0a-dj-Gyc" firstAttribute="baseline" secondItem="rws-My-0F6" secondAttribute="baseline" id="y6c-kI-gEU"/>
+                                    <constraint firstItem="Y0a-dj-Gyc" firstAttribute="top" secondItem="OSg-m0-HHT" secondAttribute="top" id="yV3-oX-R9f"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CA1-53-3iE">
+                                <rect key="frame" x="-4" y="698" width="383" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijO-yh-UoS" customClass="RoundButton" customModule="ZichenWang_Lab3" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="redColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h28-h1-XdY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipd-qm-jM7" customClass="RoundButton" customModule="ZichenWang_Lab3" customModuleProvider="target">
+                                        <rect key="frame" x="323" y="20" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="blackColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9A-s8-lpa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0k-K0-rBP" customClass="RoundButton" customModule="ZichenWang_Lab3" customModuleProvider="target">
+                                        <rect key="frame" x="68" y="20" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="orangeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZK2-Hn-3qE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re8-EB-eAC" customClass="RoundButton" customModule="ZichenWang_Lab3" customModuleProvider="target">
+                                        <rect key="frame" x="222" y="20" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="blueColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fql-Mt-1Av"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWQ-V8-CoQ" customClass="RoundButton" customModule="ZichenWang_Lab3" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="20" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="yellowColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rGb-F2-2iD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmQ-r9-EcY" customClass="RoundButton" customModule="ZichenWang_Lab3" customModuleProvider="target">
+                                        <rect key="frame" x="275" y="20" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="purpleColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wB3-Fh-zmY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUt-Jd-RRn" customClass="RoundButton" customModule="ZichenWang_Lab3" customModuleProvider="target">
+                                        <rect key="frame" x="171" y="20" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="greenColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZP-MJ-KBC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CA1-53-3iE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="698" id="5LP-zC-Xs3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="CA1-53-3iE" secondAttribute="leading" constant="4" id="9QM-Qa-F5s"/>
+                            <constraint firstItem="6nM-0m-pFn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YaR-EK-iCP"/>
+                            <constraint firstAttribute="bottom" secondItem="6nM-0m-pFn" secondAttribute="bottom" constant="680" id="oF1-h7-ipO"/>
+                            <constraint firstItem="CA1-53-3iE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="4" id="oXe-i6-rJI"/>
+                            <constraint firstItem="6nM-0m-pFn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="4" id="vGC-5L-Euh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="6nM-0m-pFn" secondAttribute="leading" constant="4" id="xeP-jX-fgR"/>
+                            <constraint firstItem="CA1-53-3iE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ySz-e7-hqO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="116.74876847290641"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="Ipd-qm-jM7">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="L0k-K0-rBP">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Re8-EB-eAC">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="XmQ-r9-EcY">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="bUt-Jd-RRn">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="ijO-yh-UoS">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="wWQ-V8-CoQ">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
